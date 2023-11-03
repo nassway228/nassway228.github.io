@@ -1,0 +1,212 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>СШГ #11</title>
+        <style>
+            .top {
+                z-index: 2;
+                width: 100%;
+                height: 60px;
+                background-color: white;
+                position: fixed;
+                left: 0;
+                right: 0;
+                top: 0;
+                display: grid;
+                grid-template-columns: 100px 200px 200px 200px 550px auto 25px 25px 25px 25px 25px 25px;
+                box-shadow: 0px 10px 20px black;
+                padding: 10px 0px;
+            }
+            .top div img {
+                padding: 0px 10px;
+                width: 50px;
+                height: 50px;
+            }
+            .toptext {
+                color: black;
+                margin: auto;
+                display: block;
+                font-size: 24px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-decoration: none;
+            }
+            .callcenter {
+                color: darkblue;
+                margin: auto;
+                display: block;
+                font-size: 24px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-decoration: none;
+            }
+            .language {
+                color: black;
+                margin: auto;
+                display: block;
+                font-size: 12px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .school {
+                width: 100%;
+                height: auto;
+            }
+            .mission {
+                width: 100%;
+                height: 150px;
+                background-color: darkblue;
+                position: absolute;
+                left: 0;
+                right: 0;
+                display: grid;
+                grid-template-columns: auto;
+                box-shadow: 0px 10px 20px black;
+                padding: 10px 0px;
+            }
+            .missiontitle {
+                color: white;
+                padding: 0px 100px;
+                font-weight: bold;
+                font-size: 24px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-decoration: none;
+            }
+            .missiondescription {
+                color: white;
+                padding: 0px 100px;
+                font-size: 14px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                text-decoration: none;
+            }
+            .advantages {
+                display: grid;
+                justify-content: center;
+                grid-template-columns: 600px 600px;
+                gap: 25px;
+            }
+            .advantages div {
+                transition: .1s;
+                color: white;
+                width: 600px;
+                height: 300px;
+                background-size: 100% 100%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold;
+                font-size: 36px;
+            }
+            .advantages div:hover {
+                font-weight: lighter;
+                filter: grayscale(100%);
+            }
+            .bot {
+                position: absolute;
+                bottom: 1;
+                left: 0;
+                right: 0;
+                padding-left: 50px;
+                background-color: #f2f2f2;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .title {
+                text-align: center;
+                font-size: 36px;
+                font-weight: bold;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .bluetext {
+                color: darkblue;
+            }
+            .faq {
+                display: grid;
+                justify-content: center;
+                row-gap: 100px;
+            }
+            .faq div {
+                width: 1500px;
+                border-bottom: 1px solid black;
+            }
+            .faq div button {
+                transition: .1s;
+                text-align: left;
+                font-weight: bold;
+                background-color: white;
+                border: none;
+                font-size: 24px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .faq div div {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 24px;
+                padding: 10px 10px;
+            }
+        </style>
+        <script>
+            function faq(id, text) {
+                let parent = document.getElementById(id)
+                let child = document.getElementById("faq" + id)
+                if (child) {
+                    child.remove()
+                    parent.firstChild.style.color = "black"
+                } else {
+                    let child = document.createElement("div")
+                    child.id = "faq" + id
+                    child.textContent = text
+                    parent.appendChild(child)
+                    parent.firstChild.style.color = "darkblue"
+                }
+            }
+
+            function changetext(text, id, fontsize) {
+                let element = document.getElementById(id)
+                element.textContent = text
+                element.style.fontSize = fontsize
+            }
+        </script>
+    </head>
+    <body>
+        <div class="top">   
+            <div><img src="logo.png"></div>
+            <div class="callcenter"><a class="callcenter" href="school.html">Главная</a></div>
+            <div class="callcenter"><a class="callcenter" href="#aboutus">О нас</a></div>
+            <div class="callcenter"><a class="callcenter" href="">Новости</a></div>
+            <div></div> 
+            <div><div class="toptext">Колл-центр:</div><div class="callcenter">8 778 522 45 47</div></div>
+            <div class="language"><a class="language" href="">KAZ</a></div>
+            <div class="language">/</div>
+            <div class="language"><a class="language" href="">RUS</a></div>
+            <div class="language">/</div>
+            <div class="language"><a class="language" href="">ENG</a></div>
+        </div>
+        <img src="school.jpg" class="school">
+        <div class="mission">
+            <div></div>
+            <div class="missiontitle">Миссия</div>
+            <div class="missiondescription">Способствовать повышению интеллектуального потенциала Казахстана посредством интеграции лучшего национального, международного опыта и значимых научных достижений практической направленности в сфере среднего образования.</div>
+        </div>
+        <div style="padding-top: 400px;"></div>
+        <div class="faq">
+            <div id="1"><button onclick="faq('1', 'Вся информация об Интеллектуальных школах доступна на сайте www.nis.edu.kz в разделе «Интеллектуальные школы»')" type="button">Как узнать контакты школ?</button></div>
+            <div id="2"><button onclick="faq('2', 'Вся информация о поступлении доступна на сайте www.nis.edu.kz в разделе «Поступление»')" type="button">Как можно к вам поступить?</button></div>
+            <div id="3"><button onclick="faq('3', 'Информация по курсам повышения квалификации доступна на сайте online.cpm.kz, а также по тел. +7(7172) 23-57-50')" type="button">Курсы повышения квалификации для учителей</button></div>
+            <div id="4"><button onclick="faq('4', 'Центр педагогических измерений СШГ 11 совместно с Виртуальной лабораторией педагогического мастерства ACADEMIA.kz запустили платный онлайн-курс «Как подготовиться к поступлению в Назарбаев Интеллектуальную школу и оценить свои возможности». Данный курс доступен на онлайн-платформе ACADEMIA.kz на казахском и русском языках. Пользователи могут прослушать онлайн-курс в любое время и в любом месте.')" type="button">Есть ли у Вас курсы подготовки к экзаменам?</button></div>
+            <div id="5"><button onclick="faq('5', 'Автономная организация образования СШГ 11 проводит пробное тестирование конкурсного отбора учащихся в 7 классы Назарбаев Интеллектуальных школ. Пробное тестирование проводится в формате компьютерного теста на базе Назарбаев Интеллектуальных школ и Международной школы г.Астаны с ограниченным количеством мест по каждой школе. Пробное тестирование включает все разделы тестирования конкурсного отбора учащихся в 7 классы. Информация о доступных датах пробного тестирования доступна на сайте в разделе «Поступление».')" type="button">Как зарегистрироваться на пробное тестирование? Как проходит пробное тестирование? Где посмотреть результаты пробного тестирования?</button></div>
+        </div>
+        <div style="padding-top: 300px;"></div>
+        <p style="padding-right: 900px;" class="title">Преимущества</p>
+        <div class="advantages">
+            <div id="adv1" onmouseleave="changetext('Инновационная учебная программа', 'adv1', '36px')" onmouseenter="changetext('Наша учебная программа выходит за рамки традиционных методов обучения, делая акцент на критическом мышлении, решении проблем, творчестве и сотрудничестве. Мы создаем учебную среду, которая побуждает учеников исследовать новые идеи, адаптироваться к трудностям и развивать любовь к учебе на протяжении всей жизни.', 'adv1', '24px')" style="background-image: url(advantages-image-1.jpg);">Инновационная учебная программа</div>
+            <div id="adv2" onmouseleave="changetext('Высококвалифиционный преподавательский состав', 'adv2', '36px')" onmouseenter="changetext('В СШГ 11 мы гордимся нашими преданными и опытными преподавателями. Наши преподаватели тщательно отбираются на основе их опыта и стремления развивать индивидуальный потенциал каждого ученика. Они обеспечивают индивидуальное внимание, наставничество и руководство, чтобы гарантировать успех каждого студента.', 'adv2', '24px')" style="background-image: url(advantages-image-2.jpg);">Высококвалифиционный преподавательский совет</div>
+            <div id="adv3" onmouseleave="changetext('Международное признание', 'adv3', '36px')" onmouseenter="changetext('СШГ 11 получил международное признание благодаря своему стремлению к совершенству в образовании. Благодаря партнерству с известными учебными заведениями и участию в глобальных образовательных программах мы гарантируем, что наши ученики получат образование мирового класса, которое подготовит их к процветанию во все более взаимосвязанном мире.', 'adv3', '24px')" style="background-image: url(advantages-image-3.jpg);">Международное признание</div>
+            <div id="adv4" onmouseleave="changetext('Внеклассные возможности', 'adv4', '36px')" onmouseenter="changetext('СШГ 11 предлагает широкий спектр внеклассных мероприятий, включая спорт, искусство, музыку и другие кружки. Эти мероприятия дополняют академическую учебную программу и предоставляют ученикам возможность открыть и развить свои увлечения, способствуя всестороннему образованию и личностному росту.', 'adv4', '24px')"style="background-image: url(advantages-image-4.jpg);">Внеклассные возможности</div>
+        </div>
+        <div style="padding-top: 500px;"></div>
+        <footer class="bot" id="aboutus">
+            <h1>Контактная информация</h1>
+            <p>​Улица Сабита Муканова, 4а​ Кокшетау, Кокшетау городская администрация, 020000</p>
+            <p>Телефон доверия</p>
+            <p class="bluetext">8 800 555 35 35</p>
+            <p class="bluetext">info@school11.kz</p>         
+            <p>2016 © sh-test.akmol.kz. Все права защищены</p>
+        </footer>
+    </body>
+</html>
