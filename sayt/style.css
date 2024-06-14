@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.container {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.centerize {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gap {
+    height: 25px;
+    width: 100%;
+}
+
+.gapbig {
+    height: 50px;
+    width: 100%;
+}
+
+.navbar {
+    padding: 25px 0;
+    background-color: white;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh;
+    background-image: url("assets/Slark.jpg");
+    background-size: cover;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+}
+
+.header_img {
+    display: flex;
+    margin-right: auto;
+    height: 70px;
+}
+
+.header_div {
+    display: flex;
+    margin: auto 0 auto auto;
+    gap: 20px;
+}
+
+.header_div_a {
+    text-align: center;
+}
+
+.bannerBG {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+}
+
+.bannertext {
+    width: 90%;
+}
+
+.bannertext_button {
+    color: white;
+    background-color: #525456;
+    border: 0;
+    border-radius: 5px;
+    width: 250px;
+    padding: 15px 0;
+
+    transition: 0.2s;
+}
+
+.bannertext_button:hover {
+    background-color: #5ea0c4;
+}
+
+@media (max-width: 720px) {
+    .bannerBG {
+      width: 100%;
+    }
+
+    .bannertext_button {
+        width: 100%;
+    }
+
+    .header_div {
+        margin: auto;
+        flex-direction: column;
+    }
+
+    .header_img {
+        margin: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .aboutus_div_div {
+        width: 0;
+        height: 0;
+        margin-right: 0;
+    }
+
+    .aboutus_div_div_img {
+        width: 0;
+        height: 0;
+    }
+}
+
+.blocktitle {
+    padding: 50px 0;
+}
+
+.blocktitle_p {
+    margin-top: 0;
+    font-size: larger;
+    text-align: center;
+}
+
+.blocktitle_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.blocktitle_div_div {
+    height: 0;
+    width: 30%;
+    border: 2px #61A6C7;
+    border-style: dashed none none none;
+}
+
+.blocktitle_div_img {
+    height: 30px;
+    width: 30px;
+    background-size: cover;
+    background-image: url("assets/blocktitledivimg.png");
+}
+
+.productoftheday {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px 25px;
+}
+
+.productoftheday_div {
+    width: 100%;
+    max-width: 280px;
+    height: 280px;
+    background-color: #AEADAD;
+}
+
+.productoftheday_div_img {
+    width: 100%;
+    max-width: 280px;
+    height: 185px;
+}
+
+.productoftheday_div_div {
+    padding: 0 10px;
+}
+
+.aboutus {
+    background-color: #D9D9D9;
+}
+
+.aboutus_div {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 50px; */
+}
+
+.aboutus_div_div {
+    margin-right: 50px;
+}
+
+.aboutus_div_p {
+    margin: 0;
+    font-size: 27px;
+}
+
+.delivery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.delivery_div {
+    margin: auto;
+    width: 100%;
+    max-width: 200px;
+}
+
+.delivery_div_img {
+    display: block;
+    margin: auto;
+    width: 60px;
+}
+
+.delivery_div_p {
+    text-align: center;
+}
+
+.footer {
+    background-color: #CCCCCC;
+}
+
+.footer_div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 50px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer_div_div {
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+}
+
+.footer_div_div_p {
+    text-align: center;
+}
+
+.footer_div_div_img {
+    display: block;
+    margin: auto;
+}
+
+.copyright {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #838080;
+}
